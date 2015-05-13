@@ -13,13 +13,13 @@ namespace Lab2
         public string address;
         public int stars;
         public double distanceToCenter;
-        static string distanceMesurementUnit;
+        static string distanceMeasurementUnit;
         public DateTime openingDate;
         public Room[] rooms;
 
         static Hotel()
         {
-            distanceMesurementUnit = "Miles";
+            distanceMeasurementUnit = "Miles";
         }
 
         public Hotel(string name, string description, string address, int stars, double distanceToCenter,
@@ -35,11 +35,13 @@ namespace Lab2
         }
 
         public void setDistanceMeasurementUnit(string distanceMeasurementUnit2){
-            distanceMesurementUnit = distanceMeasurementUnit2;
+            distanceMeasurementUnit = distanceMeasurementUnit2;
         }
+
        public string getDistanceMeasurementUnit(){
-           return distanceMesurementUnit;
+           return distanceMeasurementUnit;
        }
+
         public void displayInfo()
         {
             Console.WriteLine("\n____________");
@@ -49,11 +51,23 @@ namespace Lab2
             Console.WriteLine("address: {0}", address);
             Console.WriteLine("stars: {0}", stars);
             Console.WriteLine("distanceToCenter: {0}", distanceToCenter);
-            Console.WriteLine("km or miles: {0}", distanceMesurementUnit);
+            Console.WriteLine("km or miles: {0}", distanceMeasurementUnit);
             Console.WriteLine("opening date: {0}", openingDate);
             Console.WriteLine("rooms: ");
             foreach (Room r in rooms)
                 r.displayInfo();
+        }
+
+        public double getKmOrMiles(string distanceType){
+            DistanceConvertor d = new DistanceConvertor();
+            if (distanceType.ToUpper().Equals("KM") && distanceMeasurementUnit.ToUpper().Equals("KM"))
+                return distanceToCenter;
+            else if (distanceType.ToUpper().Equals("KM") && distanceMeasurementUnit.ToUpper().Equals("MILES"))
+                return d.convertMilesToKm(distanceToCenter);
+            else if (distanceType.ToUpper().Equals("MILES") && distanceMeasurementUnit.ToUpper().Equals("MILES"))
+                return distanceToCenter;
+            else
+                return d.convertKmToMiles(distanceToCenter);
         }
     }
 }

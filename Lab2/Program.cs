@@ -53,12 +53,19 @@ namespace Lab2
             h.displayInfo();
 
 
-            Hotel h1 = new Hotel("Astoria", "Astoria desc", "Piata Unirii", 3, 1.2, DateTime.Now, myRooms);
+            Hotel h1 = new Hotel("Astoria", "Astoria desc", "Piata Unirii", 3, 100, DateTime.Now, myRooms);
             h1.setDistanceMeasurementUnit("km");
             string newDist = h1.getDistanceMeasurementUnit();
             Console.Write(newDist);
             h.displayInfo();
             h1.displayInfo();
+
+            string type = "km";
+            h1.setDistanceMeasurementUnit(type);
+            
+            Console.WriteLine("________");
+            double newDist2 = h1.getKmOrMiles(type);
+            Console.WriteLine(newDist2);
             Console.ReadLine();
 
 

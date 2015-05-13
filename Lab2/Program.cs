@@ -13,7 +13,7 @@ namespace Lab2
         
         static void Main(string[] args)
         {
-            Hotel h = new Hotel();
+            /*Hotel h = new Hotel();
             h.name = "Unirea";
             h.description = "Visit our hotel!";
             h.address = "Piata Unirii";
@@ -43,7 +43,14 @@ namespace Lab2
             Console.WriteLine("no. of rooms: {0}", h.rooms.Length);
             
             h.displayInfo();
-           
+*/
+            Room[] myRooms = new Room[2];
+            Room room1 = new Room("room1 description", 3, 5, RoomTypes.Single);
+            Room room2 = new Room("room2 description", 4, 7, RoomTypes.Double);
+            myRooms[0] = room1;
+            myRooms[1] = room2;
+           Hotel h = new Hotel("Unirea", "Unirea description!", "Piata Unirii", 4, 1.2, DateTime.Now, myRooms);
+           h.displayInfo();
             Console.ReadLine();
 
 

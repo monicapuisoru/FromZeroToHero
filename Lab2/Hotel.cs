@@ -16,6 +16,15 @@ namespace Lab2
         public DateTime openingDate;
         public Room[] rooms;
 
+        public Hotel(string name, string description, string address, int stars, double distanceToCenter, DateTime openingDate, Room[] rooms){
+            this.name = name;
+            this.description = description;
+            this.address = address;
+            this.stars = stars;
+            this.distanceToCenter = distanceToCenter;
+            this.openingDate = openingDate;
+            this.rooms = rooms;
+        }
 
         public void displayInfo()
         {

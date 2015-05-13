@@ -22,6 +22,14 @@ namespace Lab2
         public int floor;
         public RoomTypes type;
 
+        public Room(string description, int places, int floor, RoomTypes type)
+        {
+            this.description = description;
+            this.places = places;
+            this.floor = floor;
+            this.type = type;
+        }
+
 
         public void displayInfo()
         {

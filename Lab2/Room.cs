@@ -22,6 +22,15 @@ namespace Lab2
         public int floor;
         public RoomTypes type;
 
-    
+
+        public void displayInfo()
+        {
+            Console.WriteLine("\n____________");
+            Console.WriteLine("Room Info:");
+            Console.WriteLine("description: {0}", description);
+            Console.WriteLine("places: {0}", places);
+            Console.WriteLine("floor: {0}", floor);
+            Console.WriteLine("type: {0}", type);
+        }
     }
 }

@@ -29,9 +29,9 @@ namespace Lab2
 
             Room room2 = new Room();
             room2.type = RoomTypes.Double;
-            room1.floor = 3;
-            room1.description = "room2 desc";
-            room1.places = 4;
+            room2.floor = 3;
+            room2.description = "room2 desc";
+            room2.places = 4;
 
             hotelRooms[0] = room1;
             hotelRooms[1] = room2;
@@ -41,7 +41,12 @@ namespace Lab2
             Console.WriteLine("address = {0}", h.address);
             Console.WriteLine("year = {0}", h.openingDate.Year);
             Console.WriteLine("no. of rooms: {0}", h.rooms.Length);
+            
+            h.displayInfo();
+           
             Console.ReadLine();
+
+
         }
     }
 }

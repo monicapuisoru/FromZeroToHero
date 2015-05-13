@@ -13,7 +13,7 @@ namespace Lab2
         public string address;
         public int stars;
         public double distanceToCenter;
-        public static string distanceMesurementUnit;
+        static string distanceMesurementUnit;
         public DateTime openingDate;
         public Room[] rooms;
 
@@ -33,7 +33,13 @@ namespace Lab2
             this.openingDate = openingDate;
             this.rooms = rooms;
         }
-       
+
+        public void setDistanceMeasurementUnit(string distanceMeasurementUnit2){
+            distanceMesurementUnit = distanceMeasurementUnit2;
+        }
+       public string getDistanceMeasurementUnit(){
+           return distanceMesurementUnit;
+       }
         public void displayInfo()
         {
             Console.WriteLine("\n____________");
@@ -43,7 +49,7 @@ namespace Lab2
             Console.WriteLine("address: {0}", address);
             Console.WriteLine("stars: {0}", stars);
             Console.WriteLine("distanceToCenter: {0}", distanceToCenter);
-            Console.WriteLine("km or miles: {0}", distanceMeasurementUnit);
+            Console.WriteLine("km or miles: {0}", distanceMesurementUnit);
             Console.WriteLine("opening date: {0}", openingDate);
             Console.WriteLine("rooms: ");
             foreach (Room r in rooms)

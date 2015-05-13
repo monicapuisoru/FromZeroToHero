@@ -49,8 +49,9 @@ namespace Lab2
             Room room2 = new Room("room2 description", 4, 7, RoomTypes.Double);
             myRooms[0] = room1;
             myRooms[1] = room2;
-           Hotel h = new Hotel("Unirea", "Unirea description!", "Piata Unirii", 4, 1.2, DateTime.Now, myRooms);
-           h.displayInfo();
+            Hotel h = new Hotel("Unirea", "Unirea description!", "Piata Unirii", 4, 1.2, DateTime.Now, myRooms);
+            h.displayInfo();
+
             Console.ReadLine();
 
 

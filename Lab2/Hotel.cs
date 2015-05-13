@@ -13,10 +13,18 @@ namespace Lab2
         public string address;
         public int stars;
         public double distanceToCenter;
+        public static string distanceMesurementUnit;
         public DateTime openingDate;
         public Room[] rooms;
 
-        public Hotel(string name, string description, string address, int stars, double distanceToCenter, DateTime openingDate, Room[] rooms){
+        static Hotel()
+        {
+            distanceMesurementUnit = "Miles";
+        }
+
+        public Hotel(string name, string description, string address, int stars, double distanceToCenter,
+            DateTime openingDate, Room[] rooms)
+        {
             this.name = name;
             this.description = description;
             this.address = address;
@@ -25,7 +33,7 @@ namespace Lab2
             this.openingDate = openingDate;
             this.rooms = rooms;
         }
-
+       
         public void displayInfo()
         {
             Console.WriteLine("\n____________");
@@ -35,6 +43,7 @@ namespace Lab2
             Console.WriteLine("address: {0}", address);
             Console.WriteLine("stars: {0}", stars);
             Console.WriteLine("distanceToCenter: {0}", distanceToCenter);
+            Console.WriteLine("km or miles: {0}", distanceMeasurementUnit);
             Console.WriteLine("opening date: {0}", openingDate);
             Console.WriteLine("rooms: ");
             foreach (Room r in rooms)

@@ -86,7 +86,6 @@ namespace TestExercitii
             return name;
         }
 
-
         static void printPrice(double price, int age, out double priceWithDisc)
         {
             if (age < 7)
@@ -97,8 +96,6 @@ namespace TestExercitii
                 priceWithDisc = price - 5.0 / 100.0 * price;
         }
 
-
-
         static void printPrice2(ref double price, int age)
         {
             if (age < 7)
@@ -108,7 +105,6 @@ namespace TestExercitii
             else
                 price = price - 5.0 / 100.0 * price;
         }
-
 
         static double extraDiscount(double price, int age  = 14, DiscountTypes tip = DiscountTypes.Promotion)
         {
@@ -134,6 +130,7 @@ namespace TestExercitii
             }
             return newPrice;
         }
+
         static double extraDiscount(int price, int age = 14, DiscountTypes tip = DiscountTypes.Promotion)
         {
             double newPrice = (double)price;
@@ -173,7 +170,7 @@ namespace TestExercitii
             String name = countryParams("Franta", "Romania", "Spania", "Italia", "Norvegia");
             Console.WriteLine(name);
             Console.ReadLine();
-            */
+           
             double price = 98.0;
             int age = 5;
             //double priceWithDisc;
@@ -197,6 +194,10 @@ namespace TestExercitii
 
 
             Console.WriteLine("rez overload:  " + rez);
+          * 
+          *  */
+
+
             Console.ReadLine();
         }
     }

@@ -14,20 +14,59 @@ namespace Lab2
         Duplex,
         KingBedroom
     }
-    
+       
     class Room
     {
-        protected string description;
-        protected int places;
-        protected int floor;
-        protected RoomTypes type;
+        private string description;
+        private int places;
+        private int floor;
+       private RoomTypes type;
+        private int number;
 
-        public Room(string description, int places, int floor, RoomTypes type)
+
+        private string Description
         {
-            this.description = description;
+            get { return description; }
+            set { if(value.Length> 500)
+                Console.WriteLine("description length > 500!");
+                else
+                description = value;
+            }
+        }
+
+        private RoomTypes Type
+        {
+            get;
+            set;
+        }
+        private int Number{
+            get { return number; }
+            set
+            {
+                if (value > 10000 || value < 0)
+                    Console.WriteLine("number not in interval!");
+                else number = value;
+            }
+        }
+
+        private int Floor
+        {
+            get { return floor; }
+            set
+            {
+                if (value > 1000 || value < 0)
+                    Console.WriteLine("floor not in interval!");
+                else floor = value;
+            }
+        }
+
+        public Room(string description, int places, int floor, RoomTypes type, int number)
+        {
+            this.Description = description;
             this.places = places;
-            this.floor = floor;
-            this.type = type;
+            this.Floor = floor;
+            this.Type = type;
+            this.Number = number;
         }
 
 
@@ -35,10 +74,10 @@ namespace Lab2
         {
             Console.WriteLine("\n____________");
             Console.WriteLine("Room Info:");
-            Console.WriteLine("description: {0}", description);
+            Console.WriteLine("description: {0}", Description);
             Console.WriteLine("places: {0}", places);
-            Console.WriteLine("floor: {0}", floor);
-            Console.WriteLine("type: {0}", type);
+            Console.WriteLine("floor: {0}", Floor);
+            Console.WriteLine("type: {0}", Type);
         }
     }
 }

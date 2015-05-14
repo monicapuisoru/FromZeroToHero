@@ -8,15 +8,14 @@ namespace Lab2
 {
     class Hotel
     {
-        protected string name;
-        protected string description;
-        protected string address;
-        protected int stars;
-        protected double distanceToCenter;
+        private string name;
+        private string description;
+        private string address;
+        private int stars;
+        private double distanceToCenter;
         static string distanceMeasurementUnit;
-        protected DateTime openingDate;
+        private DateTime openingDate;
        // protected Room[] rooms;
-
 
         private string Name
         {
@@ -105,21 +104,23 @@ namespace Lab2
         public Hotel(string name, string description, string address, int stars, double distanceToCenter,
             DateTime openingDate, Room[] rooms)
         {
-            this.name = name;
-            this.description = description;
-            this.address = address;
-            this.stars = stars;
-            this.distanceToCenter = distanceToCenter;
-            this.openingDate = openingDate;
+            this.Name = name;
+            this.Description = description;
+            this.Address = address;
+            this.Stars = stars;
+            this.DistanceToCenter = distanceToCenter;
+            this.OpeningDate = openingDate;
            // this.rooms = rooms;
             this.Rooms = rooms; 
         }
 
-        public void setDistanceMeasurementUnit(string distanceMeasurementUnit2){
+        public void setDistanceMeasurementUnit(string distanceMeasurementUnit2)
+        {
             distanceMeasurementUnit = distanceMeasurementUnit2;
         }
 
-       public string getDistanceMeasurementUnit(){
+       public string getDistanceMeasurementUnit()
+       {
            return distanceMeasurementUnit;
        }
 
@@ -127,15 +128,15 @@ namespace Lab2
         {
             Console.WriteLine("\n____________");
             Console.WriteLine("Hotel Info:");
-            Console.WriteLine("name: {0}", name);
-            Console.WriteLine("description: {0}", description);
-            Console.WriteLine("address: {0}", address);
-            Console.WriteLine("stars: {0}", stars);
-            Console.WriteLine("distanceToCenter: {0}", distanceToCenter);
+            Console.WriteLine("name: {0}", Name);
+            Console.WriteLine("description: {0}", Description);
+            Console.WriteLine("address: {0}", Address);
+            Console.WriteLine("stars: {0}", Stars);
+            Console.WriteLine("distanceToCenter: {0}", DistanceToCenter);
             Console.WriteLine("km or miles: {0}", distanceMeasurementUnit);
-            Console.WriteLine("opening date: {0}", openingDate);
+            Console.WriteLine("opening date: {0}", OpeningDate);
             Console.WriteLine("rooms: ");
-            foreach (Room r in rooms)
+            foreach (Room r in Rooms)
                 r.displayInfo();
         }
 

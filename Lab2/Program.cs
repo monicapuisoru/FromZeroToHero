@@ -45,8 +45,8 @@ namespace Lab2
             h.displayInfo();
 */
             Room[] myRooms = new Room[2];
-            Room room1 = new Room("room1 description", 3, 5, RoomTypes.Single);
-            Room room2 = new Room("room2 description", 4, 7, RoomTypes.Double);
+            Room room1 = new Room("room1 description", 3, 5, RoomTypes.Single, 12);
+            Room room2 = new Room("room2 description", 4, 7, RoomTypes.Double, 13);
             myRooms[0] = room1;
             myRooms[1] = room2;
             Hotel h = new Hotel("Unirea", "Unirea description!", "Piata Unirii", 4, 1.2, DateTime.Now, myRooms);
@@ -66,7 +66,14 @@ namespace Lab2
             Console.WriteLine("________");
             double newDist2 = h1.getKmOrMiles(type);
             Console.WriteLine(newDist2);
+
+            Console.WriteLine("_________________LAB 3 _________________");
+            h1.displayInfo();
+            h.displayInfo();
+            
+            
             Console.ReadLine();
+
 
 
         }

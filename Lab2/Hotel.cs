@@ -8,14 +8,94 @@ namespace Lab2
 {
     class Hotel
     {
-        public string name;
-        public string description;
-        public string address;
-        public int stars;
-        public double distanceToCenter;
+        protected string name;
+        protected string description;
+        protected string address;
+        protected int stars;
+        protected double distanceToCenter;
         static string distanceMeasurementUnit;
-        public DateTime openingDate;
-        public Room[] rooms;
+        protected DateTime openingDate;
+       // protected Room[] rooms;
+
+
+        private string Name
+        {
+            get { return name; }
+            set
+            {
+                if (value.Length > 50)
+                    Console.WriteLine("name length > 50!");
+                else
+                    name = value;
+            }
+        }
+
+        private string Description
+        {
+            get { return description;}
+            set
+            {
+                if (value.Length > 500)
+                    Console.WriteLine("description  length > 500!");
+                else
+                    description = value;
+            }
+        }
+
+        private string Address
+        {
+            get { return address; }
+            set
+            {
+                if (value.Length > 100)
+                    Console.WriteLine("address length > 100!");
+                else
+                    address = value;
+            }
+        }
+
+        private int Stars
+        {
+            get { return stars; }
+            set {
+                if (value < 0 || value > 50)
+                    Console.WriteLine("stars not in interval!");
+                else
+                    stars = value; 
+            }
+        }
+
+        private double DistanceToCenter
+        {
+            get { return distanceToCenter; }
+            set
+            {
+                if (value < 0 || value > 100)
+                    Console.WriteLine("distanceToCenter not in interval!");
+                else
+                    distanceToCenter = value;
+            }
+        }
+
+        private DateTime OpeningDate
+        {
+            get { return openingDate; }
+            set
+            {
+                DateTime d1 = new DateTime(1800, 1, 1);
+                DateTime d2 = DateTime.Now;
+                if (value < d1 || value > d2)
+                    Console.WriteLine("openingDate not in interval!");
+                else
+                   openingDate = value;
+            }
+        }
+
+        private Room[] Rooms
+        {
+            get;
+            set;
+        }
 
         static Hotel()
         {
@@ -31,7 +111,8 @@ namespace Lab2
             this.stars = stars;
             this.distanceToCenter = distanceToCenter;
             this.openingDate = openingDate;
-            this.rooms = rooms;
+           // this.rooms = rooms;
+            this.Rooms = rooms; 
         }
 
         public void setDistanceMeasurementUnit(string distanceMeasurementUnit2){

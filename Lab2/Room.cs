@@ -17,10 +17,10 @@ namespace Lab2
     
     class Room
     {
-        public string description;
-        public int places;
-        public int floor;
-        public RoomTypes type;
+        protected string description;
+        protected int places;
+        protected int floor;
+        protected RoomTypes type;
 
         public Room(string description, int places, int floor, RoomTypes type)
         {

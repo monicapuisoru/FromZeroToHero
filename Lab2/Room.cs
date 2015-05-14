@@ -17,13 +17,16 @@ namespace Lab2
        
     class Room
     {
+       
         private string description;
         private int places;
         private int floor;
-       private RoomTypes type;
+        private RoomTypes type;
         private int number;
+        private Boolean hasAirConditioning;
+        private Boolean hasFlatTV;
 
-
+        #region Proprietati
         private string Description
         {
             get { return description; }
@@ -34,11 +37,24 @@ namespace Lab2
             }
         }
 
-        private RoomTypes Type
+  
+        public RoomTypes Type
         {
-            get;
-            set;
+            get { return type; }
+            set
+            {
+                type = value;
+                switch (value)
+                {
+                    case RoomTypes.Single:
+                    case RoomTypes.Double:
+                    case RoomTypes.Twin: places = 1; break;
+                    case RoomTypes.KingBedroom:
+                    case RoomTypes.Duplex: places = 2; break;
+                }
+            }
         }
+
         private int Number{
             get { return number; }
             set
@@ -59,6 +75,53 @@ namespace Lab2
                 else floor = value;
             }
         }
+       
+        public int Places
+        {
+            get { return places; }
+            set
+            {
+                switch (Type)
+                {
+                    case RoomTypes.Single:
+                        {
+                            places = value == 1 ? value : 0;
+                            break;
+                        }
+                    case RoomTypes.Double:
+                    case RoomTypes.Twin:
+                        {
+                            places = value >= 1 && value <= 2 ? value : 0;
+                            break;
+                        }
+                    case RoomTypes.KingBedroom:
+                        {
+                            places = value >= 2 && value <= 4 ? value : 0;
+                            break;
+                        }
+                    case RoomTypes.Duplex:
+                        {
+                            places = value >= 2 && value <= 6 ? value : 0;
+                            break;
+                        }
+                }
+            }
+        }
+
+        public Boolean HasAirConditioning {
+            get { return hasAirConditioning; }
+            set { hasAirConditioning = value; } 
+        }
+
+        public Boolean HasFlatTV
+        {
+            get { return hasFlatTV; }
+            set { hasFlatTV = value; }
+        }
+
+        #endregion
+
+
 
         public Room(string description, int places, int floor, RoomTypes type, int number)
         {

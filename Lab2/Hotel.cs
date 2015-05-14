@@ -15,6 +15,10 @@ namespace Lab2
         private double distanceToCenter;
         static string distanceMeasurementUnit;
         private DateTime openingDate;
+
+        private Boolean hasPool;
+        private Boolean hasWiFi;
+
        // protected Room[] rooms;
 
         private string Name
@@ -94,6 +98,17 @@ namespace Lab2
         {
             get;
             set;
+        }
+
+        public Boolean HasPool 
+        { 
+            get{return hasPool;}
+            set{hasPool = value;}
+        }
+
+        public Boolean HasWiFi {
+            get {  return hasWiFi; } 
+            set {  hasWiFi = value; }
         }
 
         static Hotel()

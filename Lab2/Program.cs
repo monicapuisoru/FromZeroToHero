@@ -78,6 +78,7 @@ namespace Lab2
             newHotel.displayInfo();
             */
             Property gh = new GuestHouse("nume gh", "desc", "adr", 4, 1.2, "km", new DateTime(), true, true);
+
             gh.Rooms = myRooms;
             gh.displayInfo();
 

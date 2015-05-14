@@ -37,10 +37,18 @@ namespace FromZeroToHero.Excercices.Part3.Ex07
             this.p8 = p8;
         }
         
-        public override double CalculateRating()
+        public sealed override double CalculateRating()
         {
            
                 return ComfortIndex * 0.6 + 2 * stars * 0.4;
+        }
+
+        public override void displayInfo()
+        {
+            Console.WriteLine("\n____________");
+            base.displayInfo();
+            Console.WriteLine("Comfort index:{0}", ComfortIndex);
+           
         }
     
     

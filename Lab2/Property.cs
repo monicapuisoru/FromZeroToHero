@@ -157,7 +157,7 @@ namespace Lab2
            return distanceMeasurementUnit;
        }
 
-        public void displayInfo()
+        public virtual void displayInfo()
         {
             Console.WriteLine("\n____________");
             Console.WriteLine("Hotel Info:");

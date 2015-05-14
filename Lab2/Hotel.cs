@@ -25,5 +25,14 @@ namespace FromZeroToHero.Excercices.Part3.Ex07
             else
                 return Likes * 0.3 + 2 * stars * 0.7;
         }
+
+
+        public override void displayInfo()
+        {
+            Console.WriteLine("\n____________");
+            base.displayInfo();
+            Console.WriteLine("Likes:{0}", Likes);
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FromZeroToHero.Excercices.Part3.Ex07;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -51,7 +52,7 @@ namespace Lab2
             myRooms[1] = room2;
             Property h = new Property("Unirea", "Unirea description!", "Piata Unirii", 4, 1.2, DateTime.Now, myRooms);
             h.displayInfo();
-
+/*
 
             Property h1 = new Property("Astoria", "Astoria desc", "Piata Unirii", 3, 100, DateTime.Now, myRooms);
             h1.setDistanceMeasurementUnit("km");
@@ -75,7 +76,15 @@ namespace Lab2
             Console.WriteLine("____||||||_____");
             Property newHotel = new Property("Astoriaaaaa", "Astoria desc", "Piata Unirii", 3, 100, DateTime.Now, myRooms);
             newHotel.displayInfo();
-            
+            */
+            Property gh = new GuestHouse("nume gh", "desc", "adr", 4, 1.2, "km", new DateTime(), true, true);
+            gh.Rooms = myRooms;
+            gh.displayInfo();
+
+            Property h3 = new Hotel("nume", "desc", "addr", 3, 2.3, new DateTime(), myRooms, 34);
+            //h3.update("adadadadasd");
+            h3.displayInfo();
+
             Console.ReadLine();
 
 

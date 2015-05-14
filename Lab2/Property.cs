@@ -8,24 +8,27 @@ namespace Lab2
 {
     class Property
     {
-        private string name;
-        private string description;
-        private string address;
-        private int stars;
-        private double distanceToCenter;
+        protected string name;
+        protected string description;
+        protected string address;
+        protected int stars;
+        protected double distanceToCenter;
         static string distanceMeasurementUnit;
-        private DateTime openingDate;
+        protected DateTime openingDate;
 
-        private Boolean hasPool;
-        private Boolean hasWiFi;
+        protected Boolean hasPool;
+        protected Boolean hasWiFi;
+    
 
        // protected Room[] rooms;
 
-        private string Name
+        public string Name
         {
             get { return name; }
             set
             {
+                if (value == null) name = "default name";
+                else
                 if (value.Length > 50)
                     Console.WriteLine("name length > 50!");
                 else
@@ -33,23 +36,27 @@ namespace Lab2
             }
         }
 
-        private string Description
+        public string Description
         {
-            get { return description;}
+            get { return description; }
             set
             {
-                if (value.Length > 500)
-                    Console.WriteLine("description  length > 500!");
-                else
+                if (value == null) description = "default description";
+                else  if (value.Length <= 500)
+                {
                     description = value;
+                }
+                
             }
         }
 
-        private string Address
+        public string Address
         {
             get { return address; }
             set
             {
+                if (value == null) address = "default addr";
+                else
                 if (value.Length > 100)
                     Console.WriteLine("address length > 100!");
                 else
@@ -57,7 +64,7 @@ namespace Lab2
             }
         }
 
-        private int Stars
+        public int Stars
         {
             get { return stars; }
             set {
@@ -68,7 +75,7 @@ namespace Lab2
             }
         }
 
-        private double DistanceToCenter
+        public double DistanceToCenter
         {
             get { return distanceToCenter; }
             set
@@ -80,7 +87,7 @@ namespace Lab2
             }
         }
 
-        private DateTime OpeningDate
+        public DateTime OpeningDate
         {
             get { return openingDate; }
             set
@@ -94,7 +101,7 @@ namespace Lab2
             }
         }
 
-        private Room[] Rooms
+        public Room[] Rooms
         {
             get;
             set;
@@ -110,6 +117,8 @@ namespace Lab2
             get {  return hasWiFi; } 
             set {  hasWiFi = value; }
         }
+
+       
 
         static Property()
         {
@@ -175,5 +184,12 @@ namespace Lab2
             else
                 return d.convertKmToMiles(distanceToCenter);
         }
+
+        public virtual double CalculateRating ()
+        {
+            return (double)2 * (double)stars;
+        }
+
+
     }
 }

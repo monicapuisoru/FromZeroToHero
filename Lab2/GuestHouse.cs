@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab2
 {
-    class Hotel : Property
+    class GuestHouse : Property
     {
     }
 }

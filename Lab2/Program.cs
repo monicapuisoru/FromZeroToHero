@@ -49,11 +49,11 @@ namespace Lab2
             Room room2 = new Room("room2 description", 4, 7, RoomTypes.Double, 13);
             myRooms[0] = room1;
             myRooms[1] = room2;
-            Hotel h = new Hotel("Unirea", "Unirea description!", "Piata Unirii", 4, 1.2, DateTime.Now, myRooms);
+            Property h = new Property("Unirea", "Unirea description!", "Piata Unirii", 4, 1.2, DateTime.Now, myRooms);
             h.displayInfo();
 
 
-            Hotel h1 = new Hotel("Astoria", "Astoria desc", "Piata Unirii", 3, 100, DateTime.Now, myRooms);
+            Property h1 = new Property("Astoria", "Astoria desc", "Piata Unirii", 3, 100, DateTime.Now, myRooms);
             h1.setDistanceMeasurementUnit("km");
             string newDist = h1.getDistanceMeasurementUnit();
             Console.Write(newDist);
@@ -70,7 +70,11 @@ namespace Lab2
             Console.WriteLine("_________________LAB 3 _________________");
             h1.displayInfo();
             h.displayInfo();
-            
+
+
+            Console.WriteLine("____||||||_____");
+            Property newHotel = new Property("Astoriaaaaa", "Astoria desc", "Piata Unirii", 3, 100, DateTime.Now, myRooms);
+            newHotel.displayInfo();
             
             Console.ReadLine();
 

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2", "Lab2\Lab2.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab3", "Lab3\Lab3.csproj", "{325DED79-2E51-4390-8380-756D62209367}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FZTH.MVC", "..\..\..\..\Desktop\FZTH.MVC\FZTH.MVC\FZTH.MVC\FZTH.MVC.csproj", "{499FCBC8-577C-4DF2-98FF-1EFAC2067C17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{325DED79-2E51-4390-8380-756D62209367}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{325DED79-2E51-4390-8380-756D62209367}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{325DED79-2E51-4390-8380-756D62209367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{499FCBC8-577C-4DF2-98FF-1EFAC2067C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{499FCBC8-577C-4DF2-98FF-1EFAC2067C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{499FCBC8-577C-4DF2-98FF-1EFAC2067C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{499FCBC8-577C-4DF2-98FF-1EFAC2067C17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
